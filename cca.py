@@ -1,14 +1,14 @@
 from skimage import measure
 from skimage.measure import regionprops
 import matplotlib.pyplot as mplt
-import matplotlib.patchea as pat
+import matplotlib.patches as pat
 import loc
 
 # groups all connected portions and groups them together
 labimg = measure.label(loc.binarycimg)
 # setting the maximum width , height, that a license plate can be
 platedim = (0.08*labimg.shape[0], 0.2*labimg.shape[0], 0.15*labimg.shape[1], 0.4*labimg.shape[1])
-minh, maxh, minw, maxw = platedimm
+minh, maxh, minw, maxw = platedim
 plateobjcoor = []
 platelike = []
 fig, (ax1) = mplt.subplots(1)
